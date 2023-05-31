@@ -1,9 +1,12 @@
 import { useContext } from 'react';
 import PlanetsContext from '../../context/PlanetsContext';
+import useFetch from '../../context/hooks/useFetch';
 
 function FilterBar() {
-  const { search, setSearch, filter, handleChange, handleClick } = useContext(PlanetsContext);
-  // console.log(filter);
+  const { search, setSearch,
+    handleChange } = useContext(PlanetsContext);
+  const { handleClick } = useFetch();
+
   return (
     <form>
       <label>
@@ -47,7 +50,8 @@ function FilterBar() {
         </label>
         <button
           data-testid="button-filter"
-          onClick={ () => handleClick(name, value) }
+          type="button"
+          onClick={ () => handleClick() }
         >
           Filter
         </button>

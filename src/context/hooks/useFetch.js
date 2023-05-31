@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import PlanetsContext from '../PlanetsContext';
 
 function useFetch() {
   const [data, setData] = useState([]);
@@ -17,8 +18,17 @@ function useFetch() {
     refresh();
   }, []);
 
+  const { filter } = useContext(PlanetsContext);
+  const handleClick = () => {
+    // if (filter.comparisonFilter === 'maior que') {
+    //   data.filter(filter.columnFilter > filter.valueFilter);
+    // }
+    console.log(filter.columnFilter)
+  };
+
   return {
     data,
+    handleClick,
   };
 }
 

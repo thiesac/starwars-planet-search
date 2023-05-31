@@ -14,10 +14,7 @@ function PlanetsProvider({ children }) {
     setFilter({ ...filter, [name]: value });
   }
 
-  function handleClick(name, value) {
-    console.log(filter)
-  }
-  const values = { search, setSearch, filter, setFilter, handleChange, handleClick };
+  const values = { search, setSearch, filter, setFilter, handleChange };
 
   return (
     <PlanetsContext.Provider value={ values }>
