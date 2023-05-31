@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import PlanetsContext from './PlanetsContext';
 
 const INITIAL_STATE = { };
@@ -14,7 +15,7 @@ function PlanetsProvider({ children }) {
 }
 
 PlanetsProvider.propTypes = {
-  childre: PropTypes.element,
+  children: PropTypes.element,
 }.isRequired;
 
 export default PlanetsProvider;
