@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import PlanetsContext from './PlanetsContext';
 
-const INITIAL_STATE = { };
-
 function PlanetsProvider({ children }) {
-  const [state] = useState(INITIAL_STATE);
+  const [search, setSearch] = useState('');
+  const values = { search, setSearch };
 
   return (
-    <PlanetsContext.Provider value={ state }>
+    <PlanetsContext.Provider value={ values }>
       { children }
     </PlanetsContext.Provider>
   );
