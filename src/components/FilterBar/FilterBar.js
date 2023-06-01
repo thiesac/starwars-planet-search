@@ -4,7 +4,8 @@ import PlanetsContext from '../../context/PlanetsContext';
 function FilterBar() {
   const { search, setSearch,
     handleChange, handleClick, filter,
-    newState, columnFilters } = useContext(PlanetsContext);
+    newState, columnFilters, setNewState, setColumnFilters,
+    onClickRemoveOneFilter } = useContext(PlanetsContext);
 
   return (
     <form>
@@ -56,14 +57,30 @@ function FilterBar() {
         >
           Filter
         </button>
+        <button
+          data-testid="button-remove-filters"
+          type="button"
+          onClick={ () => {
+            setNewState([]);
+            setColumnFilters(['population', 'orbital_period',
+              'diameter', 'rotation_period', 'surface_water']);
+          } }
+        >
+          Remover todas filtragens
+        </button>
       </fieldset>
       {
         newState.length > 0 ? (newState
           .map((state, index) => (
-            <span key={ index }>
+            <span key={ index } data-testid="filter">
               { `${state.columnFilter} ${state.comparisonFilter} ${state.valueFilter}` }
               { ' ' }
-              <button>Excluir</button>
+              <button
+                type="button"
+                onClick={ () => onClickRemoveOneFilter(state.columnFilter) }
+              >
+                Excluir
+              </button>
             </span>
           ))) : null
       }
