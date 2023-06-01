@@ -1,11 +1,9 @@
 import { useContext } from 'react';
 import PlanetsContext from '../../context/PlanetsContext';
-import useFetch from '../../context/hooks/useFetch';
 
 function FilterBar() {
   const { search, setSearch,
-    handleChange } = useContext(PlanetsContext);
-  const { handleClick } = useFetch();
+    handleChange, handleClick } = useContext(PlanetsContext);
 
   return (
     <form>

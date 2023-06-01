@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import useFetch from '../../context/hooks/useFetch';
+// import useFetch from '../../context/hooks/useFetch';
 import PlanetsContext from '../../context/PlanetsContext';
 
 function Table() {
-  const { data } = useFetch();
-  const { search } = useContext(PlanetsContext);
-  console.log(data);
+  // const { data } = useFetch();
+  const { search, newData } = useContext(PlanetsContext);
+  console.log(newData);
 
   return (
     <table>
@@ -28,7 +28,7 @@ function Table() {
       </thead>
       <tbody>
         {
-          data.filter((planet) => planet.name.includes(search))
+          newData.filter((planet) => planet.name.includes(search))
             .map(({
               name,
               rotation_period: rotationPeriod,

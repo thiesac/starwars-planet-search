@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from 'react';
-import PlanetsContext from '../PlanetsContext';
+import { useEffect, useState } from 'react';
+// import PlanetsContext from '../PlanetsContext';
 
 function useFetch() {
   const [data, setData] = useState([]);
@@ -18,19 +18,20 @@ function useFetch() {
     refresh();
   }, []);
 
-  const { filter } = useContext(PlanetsContext);
-  const handleClick = () => {
-    if (filter.comparisonFilter === 'maior que') {
-      const filteredData = data.filter((planet) => planet.name.includes('a'));
-      // console.log(filter);
-      setData(filteredData);
-      // console.log(data);
-    }
-  };
+  // const { filter } = useContext(PlanetsContext);
+  // const handleClick = () => {
+  //   if (filter.comparisonFilter === 'maior que') {
+  //     const filteredData = data.filter((planet) => planet.name.includes('a'));
+  //     // console.log(filter);
+  //     setData(filteredData);
+  //     // console.log(data);
+  //   }
+  // };
 
   return {
     data,
-    handleClick,
+    setData,
+    // handleClick,
   };
 }
 
