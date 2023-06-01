@@ -12,6 +12,9 @@ function PlanetsProvider({ children }) {
     valueFilter: 0,
   });
   const [newState, setNewState] = useState([]);
+  const initialOptions = ['population', 'orbital_period',
+    'diameter', 'rotation_period', 'surface_water'];
+  const [columnFilters, setColumnFilters] = useState(initialOptions);
 
   const handleChange = (name, value) => {
     setFilter({ ...filter, [name]: value });
@@ -30,15 +33,19 @@ function PlanetsProvider({ children }) {
         .filter((planet) => Number(planet[filter
           .columnFilter]) < Number(filter.valueFilter));
       setNewData(filteredData);
+      setNewState([...newState, filter]);
     }
     if (filter.comparisonFilter === 'igual a') {
       const filteredData = newData
         .filter((planet) => Number(planet[filter
           .columnFilter]) === Number(filter.valueFilter));
       setNewData(filteredData);
+      setNewState([...newState, filter]);
     }
+    const usedOptions = columnFilters.filter((column) => column !== filter.columnFilter);
+    setColumnFilters(usedOptions);
+    setFilter({ ...filter, columnFilter: usedOptions[0] });
   };
-  // console.log(newState);
 
   const { data } = useFetch();
   useEffect(() => {
@@ -54,6 +61,7 @@ function PlanetsProvider({ children }) {
     setNewData,
     handleClick,
     newState,
+    columnFilters,
   };
 
   return (

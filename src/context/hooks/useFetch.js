@@ -18,16 +18,6 @@ function useFetch() {
     refresh();
   }, []);
 
-  // const { filter } = useContext(PlanetsContext);
-  // const handleClick = () => {
-  //   if (filter.comparisonFilter === 'maior que') {
-  //     const filteredData = data.filter((planet) => planet.name.includes('a'));
-  //     // console.log(filter);
-  //     setData(filteredData);
-  //     // console.log(data);
-  //   }
-  // };
-
   return {
     data,
     setData,

@@ -3,7 +3,8 @@ import PlanetsContext from '../../context/PlanetsContext';
 
 function FilterBar() {
   const { search, setSearch,
-    handleChange, handleClick, filter, newState } = useContext(PlanetsContext);
+    handleChange, handleClick, filter,
+    newState, columnFilters } = useContext(PlanetsContext);
 
   return (
     <form>
@@ -23,11 +24,11 @@ function FilterBar() {
           name="columnFilter"
           onChange={ ({ target: { name, value } }) => handleChange(name, value) }
         >
-          <option value="population">population</option>
-          <option value="orbital_period">orbital_period</option>
-          <option value="diameter">diameter</option>
-          <option value="rotation_period">rotation_period</option>
-          <option value="surface_water">surface_water</option>
+          {
+            columnFilters.map((column) => (
+              <option value={ column } key={ column }>{ column }</option>
+            ))
+          }
         </select>
         <select
           data-testid="comparison-filter"
@@ -57,7 +58,14 @@ function FilterBar() {
         </button>
       </fieldset>
       {
-        newState.length > 0 ? (newState.map((state) => (console.log(state)))) : null
+        newState.length > 0 ? (newState
+          .map((state, index) => (
+            <span key={ index }>
+              { `${state.columnFilter} ${state.comparisonFilter} ${state.valueFilter}` }
+              { ' ' }
+              <button>Excluir</button>
+            </span>
+          ))) : null
       }
     </form>
   );
