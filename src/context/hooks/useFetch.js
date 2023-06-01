@@ -20,10 +20,12 @@ function useFetch() {
 
   const { filter } = useContext(PlanetsContext);
   const handleClick = () => {
-    // if (filter.comparisonFilter === 'maior que') {
-    //   data.filter(filter.columnFilter > filter.valueFilter);
-    // }
-    console.log(filter.columnFilter)
+    if (filter.comparisonFilter === 'maior que') {
+      const filteredData = data.filter((planet) => planet.name.includes('a'));
+      // console.log(filter);
+      setData(filteredData);
+      // console.log(data);
+    }
   };
 
   return {

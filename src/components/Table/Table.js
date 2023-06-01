@@ -5,6 +5,7 @@ import PlanetsContext from '../../context/PlanetsContext';
 function Table() {
   const { data } = useFetch();
   const { search } = useContext(PlanetsContext);
+  console.log(data);
 
   return (
     <table>

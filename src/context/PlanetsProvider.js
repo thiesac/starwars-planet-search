@@ -10,9 +10,9 @@ function PlanetsProvider({ children }) {
     valueFilter: 0,
   });
 
-  function handleChange(name, value) {
+  const handleChange = (name, value) => {
     setFilter({ ...filter, [name]: value });
-  }
+  };
 
   const values = { search, setSearch, filter, setFilter, handleChange };
 
