@@ -19,18 +19,18 @@ function PlanetsProvider({ children }) {
   const handleClick = () => {
     if (filter.comparisonFilter === 'maior que') {
       const filteredData = newData
-        .filter((planet) => planet[filter.columnFilter] > Number(filter.valueFilter));
+        .filter((planet) => Number(planet[filter.columnFilter]) > Number(filter.valueFilter));
       setNewData(filteredData);
     }
     if (filter.comparisonFilter === 'menor que') {
       const filteredData = newData
-        .filter((planet) => planet[filter.columnFilter] < Number(filter.valueFilter));
+        .filter((planet) => Number(planet[filter.columnFilter]) < Number(filter.valueFilter));
       setNewData(filteredData);
     }
     if (filter.comparisonFilter === 'igual a') {
       const filteredData = newData
-        .filter((planet) => planet[Number(filter
-          .columnFilter)] === Number(filter.valueFilter));
+        .filter((planet) => Number(planet[filter
+          .columnFilter]) === Number(filter.valueFilter));
       setNewData(filteredData);
     }
   };

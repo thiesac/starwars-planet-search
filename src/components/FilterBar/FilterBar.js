@@ -3,7 +3,7 @@ import PlanetsContext from '../../context/PlanetsContext';
 
 function FilterBar() {
   const { search, setSearch,
-    handleChange, handleClick } = useContext(PlanetsContext);
+    handleChange, handleClick, filter } = useContext(PlanetsContext);
 
   return (
     <form>
@@ -44,7 +44,7 @@ function FilterBar() {
             type="number"
             data-testid="value-filter"
             name="valueFilter"
-            placeholder="0"
+            value={ filter.valueFilter }
             onChange={ ({ target: { name, value } }) => handleChange(name, value) }
           />
         </label>
