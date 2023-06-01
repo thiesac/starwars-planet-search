@@ -3,7 +3,7 @@ import PlanetsContext from '../../context/PlanetsContext';
 
 function FilterBar() {
   const { search, setSearch,
-    handleChange, handleClick, filter } = useContext(PlanetsContext);
+    handleChange, handleClick, filter, newState } = useContext(PlanetsContext);
 
   return (
     <form>
@@ -56,6 +56,9 @@ function FilterBar() {
           Filter
         </button>
       </fieldset>
+      {
+        newState.length > 0 ? (newState.map((state) => (console.log(state)))) : null
+      }
     </form>
   );
 }

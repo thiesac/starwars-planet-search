@@ -11,6 +11,7 @@ function PlanetsProvider({ children }) {
     comparisonFilter: 'maior que',
     valueFilter: 0,
   });
+  const [newState, setNewState] = useState([]);
 
   const handleChange = (name, value) => {
     setFilter({ ...filter, [name]: value });
@@ -19,12 +20,15 @@ function PlanetsProvider({ children }) {
   const handleClick = () => {
     if (filter.comparisonFilter === 'maior que') {
       const filteredData = newData
-        .filter((planet) => Number(planet[filter.columnFilter]) > Number(filter.valueFilter));
+        .filter((planet) => Number(planet[filter
+          .columnFilter]) > Number(filter.valueFilter));
       setNewData(filteredData);
+      setNewState([...newState, filter]);
     }
     if (filter.comparisonFilter === 'menor que') {
       const filteredData = newData
-        .filter((planet) => Number(planet[filter.columnFilter]) < Number(filter.valueFilter));
+        .filter((planet) => Number(planet[filter
+          .columnFilter]) < Number(filter.valueFilter));
       setNewData(filteredData);
     }
     if (filter.comparisonFilter === 'igual a') {
@@ -34,6 +38,7 @@ function PlanetsProvider({ children }) {
       setNewData(filteredData);
     }
   };
+  // console.log(newState);
 
   const { data } = useFetch();
   useEffect(() => {
@@ -48,6 +53,7 @@ function PlanetsProvider({ children }) {
     newData,
     setNewData,
     handleClick,
+    newState,
   };
 
   return (
