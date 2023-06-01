@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
-// import useFetch from '../../context/hooks/useFetch';
 import PlanetsContext from '../../context/PlanetsContext';
 
 function Table() {
-  // const { data } = useFetch();
   const { search, newData } = useContext(PlanetsContext);
-  console.log(newData);
 
   return (
     <table>

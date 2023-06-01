@@ -29,7 +29,8 @@ function PlanetsProvider({ children }) {
     }
     if (filter.comparisonFilter === 'igual a') {
       const filteredData = newData
-        .filter((planet) => planet[filter.columnFilter] === Number(filter.valueFilter));
+        .filter((planet) => planet[Number(filter
+          .columnFilter)] === Number(filter.valueFilter));
       setNewData(filteredData);
     }
   };

@@ -39,10 +39,12 @@ function FilterBar() {
           <option value="igual a">igual a</option>
         </select>
         <label>
+          Número
           <input
             type="number"
             data-testid="value-filter"
             name="valueFilter"
+            placeholder="0"
             onChange={ ({ target: { name, value } }) => handleChange(name, value) }
           />
         </label>
