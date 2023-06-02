@@ -5,7 +5,7 @@ function Table() {
   const { search, newData } = useContext(PlanetsContext);
 
   return (
-    <table>
+    <table data-testid="results-table">
       <thead>
         <tr>
           <th>Name</th>

@@ -41,7 +41,7 @@ function FilterBar() {
           <option value="igual a">igual a</option>
         </select>
         <label>
-          Número
+          Number
           <input
             type="number"
             data-testid="value-filter"
@@ -66,7 +66,7 @@ function FilterBar() {
               'diameter', 'rotation_period', 'surface_water']);
           } }
         >
-          Remover todas filtragens
+          Remove all filters
         </button>
       </fieldset>
       {
@@ -79,7 +79,7 @@ function FilterBar() {
                 type="button"
                 onClick={ () => onClickRemoveOneFilter(state.columnFilter) }
               >
-                Excluir
+                X
               </button>
             </span>
           ))) : null
