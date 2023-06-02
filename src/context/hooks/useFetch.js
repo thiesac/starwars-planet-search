@@ -21,7 +21,6 @@ function useFetch() {
   return {
     data,
     setData,
-    // handleClick,
   };
 }
 

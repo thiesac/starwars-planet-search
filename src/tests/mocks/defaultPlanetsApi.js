@@ -13,18 +13,18 @@ const defaultPlanetsApi = {
       "terrain": "desert",
       "surface_water": "1",
       "population": "200000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/1/",
-      //   "https://swapi.dev/api/people/2/",
-      //   "https://swapi.dev/api/people/4/",
-      //   "https://swapi.dev/api/people/6/",
-      //   "https://swapi.dev/api/people/7/",
-      //   "https://swapi.dev/api/people/8/",
-      //   "https://swapi.dev/api/people/9/",
-      //   "https://swapi.dev/api/people/11/",
-      //   "https://swapi.dev/api/people/43/",
-      //   "https://swapi.dev/api/people/62/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/1/",
+        "https://swapi.dev/api/people/2/",
+        "https://swapi.dev/api/people/4/",
+        "https://swapi.dev/api/people/6/",
+        "https://swapi.dev/api/people/7/",
+        "https://swapi.dev/api/people/8/",
+        "https://swapi.dev/api/people/9/",
+        "https://swapi.dev/api/people/11/",
+        "https://swapi.dev/api/people/43/",
+        "https://swapi.dev/api/people/62/"
+      ],
       "films": [
         "https://swapi.dev/api/films/1/",
         "https://swapi.dev/api/films/3/",
@@ -46,11 +46,11 @@ const defaultPlanetsApi = {
       "terrain": "grasslands, mountains",
       "surface_water": "40",
       "population": "2000000000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/5/",
-      //   "https://swapi.dev/api/people/68/",
-      //   "https://swapi.dev/api/people/81/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/5/",
+        "https://swapi.dev/api/people/68/",
+        "https://swapi.dev/api/people/81/"
+      ],
       "films": [
         "https://swapi.dev/api/films/1/",
         "https://swapi.dev/api/films/6/"
@@ -69,7 +69,7 @@ const defaultPlanetsApi = {
       "terrain": "jungle, rainforests",
       "surface_water": "8",
       "population": "1000",
-      // "residents": [],
+      "residents": [],
       "films": [
         "https://swapi.dev/api/films/1/"
       ],
@@ -87,7 +87,7 @@ const defaultPlanetsApi = {
       "terrain": "tundra, ice caves, mountain ranges",
       "surface_water": "100",
       "population": "unknown",
-      // "residents": [],
+      "residents": [],
       "films": [
         "https://swapi.dev/api/films/2/"
       ],
@@ -105,7 +105,7 @@ const defaultPlanetsApi = {
       "terrain": "swamp, jungles",
       "surface_water": "8",
       "population": "unknown",
-      // "residents": [],
+      "residents": [],
       "films": [
         "https://swapi.dev/api/films/2/",
         "https://swapi.dev/api/films/3/",
@@ -125,9 +125,9 @@ const defaultPlanetsApi = {
       "terrain": "gas giant",
       "surface_water": "0",
       "population": "6000000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/26/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/26/"
+      ],
       "films": [
         "https://swapi.dev/api/films/2/"
       ],
@@ -145,9 +145,9 @@ const defaultPlanetsApi = {
       "terrain": "forests, mountains, lakes",
       "surface_water": "8",
       "population": "30000000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/30/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/30/"
+      ],
       "films": [
         "https://swapi.dev/api/films/3/"
       ],
@@ -165,19 +165,19 @@ const defaultPlanetsApi = {
       "terrain": "grassy hills, swamps, forests, mountains",
       "surface_water": "12",
       "population": "4500000000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/3/",
-      //   "https://swapi.dev/api/people/21/",
-      //   "https://swapi.dev/api/people/35/",
-      //   "https://swapi.dev/api/people/36/",
-      //   "https://swapi.dev/api/people/37/",
-      //   "https://swapi.dev/api/people/38/",
-      //   "https://swapi.dev/api/people/39/",
-      //   "https://swapi.dev/api/people/42/",
-      //   "https://swapi.dev/api/people/60/",
-      //   "https://swapi.dev/api/people/61/",
-      //   "https://swapi.dev/api/people/66/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/3/",
+        "https://swapi.dev/api/people/21/",
+        "https://swapi.dev/api/people/35/",
+        "https://swapi.dev/api/people/36/",
+        "https://swapi.dev/api/people/37/",
+        "https://swapi.dev/api/people/38/",
+        "https://swapi.dev/api/people/39/",
+        "https://swapi.dev/api/people/42/",
+        "https://swapi.dev/api/people/60/",
+        "https://swapi.dev/api/people/61/",
+        "https://swapi.dev/api/people/66/"
+      ],
       "films": [
         "https://swapi.dev/api/films/3/",
         "https://swapi.dev/api/films/4/",
@@ -198,11 +198,11 @@ const defaultPlanetsApi = {
       "terrain": "cityscape, mountains",
       "surface_water": "unknown",
       "population": "1000000000000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/34/",
-      //   "https://swapi.dev/api/people/55/",
-      //   "https://swapi.dev/api/people/74/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/34/",
+        "https://swapi.dev/api/people/55/",
+        "https://swapi.dev/api/people/74/"
+      ],
       "films": [
         "https://swapi.dev/api/films/3/",
         "https://swapi.dev/api/films/4/",
@@ -223,11 +223,11 @@ const defaultPlanetsApi = {
       "terrain": "ocean",
       "surface_water": "100",
       "population": "1000000000",
-      // "residents": [
-      //   "https://swapi.dev/api/people/22/",
-      //   "https://swapi.dev/api/people/72/",
-      //   "https://swapi.dev/api/people/73/"
-      // ],
+      "residents": [
+        "https://swapi.dev/api/people/22/",
+        "https://swapi.dev/api/people/72/",
+        "https://swapi.dev/api/people/73/"
+      ],
       "films": [
         "https://swapi.dev/api/films/5/"
       ],
