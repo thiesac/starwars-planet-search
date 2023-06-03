@@ -26,7 +26,9 @@ input {
 .planet-search input {
   border: 1px solid white;
   border-radius: 5px;
+  color: white;
   display: flex;
+  font-size: 16px;
   height: 42px;
   text-align: center;
   width: 671px;

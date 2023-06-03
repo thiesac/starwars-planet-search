@@ -1,0 +1,23 @@
+.section-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  max-width: 90%;
+}
+
+.section-table thead th {
+  background-color: #2e3035;
+  border: 1px solid black;
+}
+
+.section-table tr td {
+  border-bottom: 1px solid #aeaeae;
+  border-collapse: collapse;
+  color: #aeaeae;
+  padding: 10px;
+}

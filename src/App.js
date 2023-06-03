@@ -7,7 +7,7 @@ import Stars from './components/Stars/Stars';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <PlanetsProvider>
         <Header />
         <FilterBar />
