@@ -3,7 +3,7 @@
 }
 
 .header img {
-  animation: logo 10s ease-out infinite;
+  animation: logo 10s ease-out;
   height: 50vh;
   max-width: 100vw;
   position: relative;

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { FaSearch } from 'react-icons/fa';
 import PlanetsContext from '../../context/PlanetsContext';
 import './FilterBar.css';
 
@@ -11,18 +12,16 @@ function FilterBar() {
   return (
     <form className="filter-bar">
       <div className="planet-search">
-        <label>
-          Planet
-          <input
-            type="text"
-            data-testid="name-filter"
-            name="search-planet-input"
-            value={ search }
-            onChange={ ({ target }) => setSearch(target.value) }
-          />
-        </label>
+        <FaSearch className="fasearch" />
+        <input
+          type="text"
+          data-testid="name-filter"
+          name="search-planet-input"
+          value={ search }
+          onChange={ ({ target }) => setSearch(target.value) }
+        />
       </div>
-      <fieldset>
+      <div className="filterbar-filters">
         <select
           data-testid="column-filter"
           name="columnFilter"
@@ -43,16 +42,14 @@ function FilterBar() {
           <option value="menor que">menor que</option>
           <option value="igual a">igual a</option>
         </select>
-        <label>
-          Number
-          <input
-            type="number"
-            data-testid="value-filter"
-            name="valueFilter"
-            value={ filter.valueFilter }
-            onChange={ ({ target: { name, value } }) => handleChange(name, value) }
-          />
-        </label>
+        <input
+          type="number"
+          placeholder="0"
+          data-testid="value-filter"
+          name="valueFilter"
+          value={ filter.valueFilter }
+          onChange={ ({ target: { name, value } }) => handleChange(name, value) }
+        />
         <button
           data-testid="button-filter"
           type="button"
@@ -71,7 +68,7 @@ function FilterBar() {
         >
           Remove all filters
         </button>
-      </fieldset>
+      </div>
       {
         newState.length > 0 ? (newState
           .map((state, index) => (
