@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
 import Table from './components/Table/Table';
 import PlanetsProvider from './context/PlanetsProvider';
 import FilterBar from './components/FilterBar/FilterBar';
 import Header from './components/Header/Header';
+import Stars from './components/Stars/Stars';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Header />
         <FilterBar />
         <Table />
+        <Stars />
       </PlanetsProvider>
     </div>
   );

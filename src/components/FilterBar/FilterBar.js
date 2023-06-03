@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import PlanetsContext from '../../context/PlanetsContext';
+import './FilterBar.css';
 
 function FilterBar() {
   const { search, setSearch,
@@ -8,17 +9,19 @@ function FilterBar() {
     onClickRemoveOneFilter } = useContext(PlanetsContext);
 
   return (
-    <form>
-      <label>
-        Planet
-        <input
-          type="text"
-          data-testid="name-filter"
-          name="search-planet-input"
-          value={ search }
-          onChange={ ({ target }) => setSearch(target.value) }
-        />
-      </label>
+    <form className="filter-bar">
+      <div className="planet-search">
+        <label>
+          Planet
+          <input
+            type="text"
+            data-testid="name-filter"
+            name="search-planet-input"
+            value={ search }
+            onChange={ ({ target }) => setSearch(target.value) }
+          />
+        </label>
+      </div>
       <fieldset>
         <select
           data-testid="column-filter"

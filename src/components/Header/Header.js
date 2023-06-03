@@ -1,10 +1,10 @@
 import React from 'react';
+import './Header.css';
+import logo from '../../images/Star_Wars_Logo.png';
 
 function Header() {
   return (
-    <div>
-      <h1>STAR WARS</h1>
-    </div>
+    <header className="header"><img src={ logo } alt="logo" /></header>
   );
 }
 

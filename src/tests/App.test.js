@@ -18,11 +18,11 @@ afterEach(jest.restoreAllMocks);
 
 
 describe('Testa se os elementos estão presentes na tela', () => {
-  test('Título da página', () => {
-    render(<App />);
-    const h1Element = screen.getByRole('heading', { name: /star wars/i });
-    expect(h1Element).toBeInTheDocument();
-  });
+  // test('Título da página', () => {
+  //   render(<App />);
+  //   const h1Element = screen.getByRole('heading', { name: /star wars/i });
+  //   expect(h1Element).toBeInTheDocument();
+  // });
 
   test('Input de busca dos planetas', () => {
     render(<App />);
