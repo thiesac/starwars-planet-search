@@ -1,7 +1,5 @@
 # Star Wars Planet Search
 
-![Star Wars Planet Search](./src/assets/images/starwars-planet-search.jpg)
-
 ## Table of Contents
 
 - [Description](#description)
@@ -16,10 +14,6 @@
 ## Description
 
 Star Wars Planet Search is a web application that allows users to explore the vast universe of Star Wars planets. With this application, users can search for specific planets by name, view detailed information about each planet, and discover interesting facts from the Star Wars universe.
-
-## Demo
-
-[Live Demo](https://your-live-demo-url.com)
 
 ## Features
 
